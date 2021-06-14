@@ -11,28 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(numberComputer);
     alert (numberComputer + " Memorizzali e attendi 30 secondi");
 
-    setTimeout (function () {
+    var numberUser = [];
 
-        var numberUser = [];
-        var check = false;
-
-        while (numberUser.length < 5) {
-            var user = parseInt(prompt("Inserisci i 5 numeri generati dal computer"));
+    setTimeout(function() {
+        for (var x = 0; x < 5; x++) {
+          var user = parseInt(prompt("Inserisci i 5 numeri generati dal computer"));
+          if (user === numberComputer[x]) {
             numberUser.push(user);
-            for (var x = 0; x <= numberUser.length; x++) {
-                if (numberUser[x] === numberComputer.length) {
-                    check = true;
-                    break;
-                } 
-            }
+          }
         }
 
-        if (!check) {
-            alert("HAI VINTO" + " quanti numeri inseriti : " + numberUser.length + " quali numeri inseriti : " + numberUser);
-        } else {
-            alert("HAI PERSO" + " quanti numeri inseriti : " + numberUser.length + " quali numeri inseriti : " + numberUser);
-        }
+        alert("Quanti numeri hai indovinato: " + numberUser.length + " quali sono i numeri che hai inserito: " + numberUser);
 
-    }, 30000);
+    }, 30000)
 
 });
