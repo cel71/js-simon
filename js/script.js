@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     console.log(numberComputer);
-    alert(numberComputer + " Memorizzali e attendi 30 secondi");
+    alert (numberComputer + " Memorizzali e attendi 30 secondi");
 
     setTimeout (function () {
 
@@ -33,8 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("HAI PERSO" + " quanti numeri inseriti : " + numberUser.length + " quali numeri inseriti : " + numberUser);
         }
 
-    }, 3000);
-
-
+    }, 30000);
 
 });
