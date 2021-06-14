@@ -21,7 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        alert("Quanti numeri hai indovinato: " + numberUser.length + " quali sono i numeri che hai inserito: " + numberUser);
+        var outPutHtml = document.querySelector(".utente");
+        outPutHtml.style.display = "block";
+
+        outPutHtml.innerHTML = "Quanti numeri hai indovinato: " + numberUser.length + " - Quali sono i numeri che hai inserito: " + numberUser
 
     }, 30000)
 
